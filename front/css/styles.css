@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor Principal */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Sidebar para el Árbol de Directorios */
+.sidebar {
+  width: 280px;
+  min-width: 220px;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  border-right: 1px solid #2d2d44;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Área Principal de Chat */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f9fb;
+}
+
+/* Header */
+.chat-header {
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaedf1;
+  display: flex;
+  align-items: center;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.bot-info h2 {
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.status {
+  font-size: 12px;
+  color: #10b981;
+}
+
+/* Contenedor de Mensajes */
+.chat-messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.message-time {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* Estilos para el Bot */
+.bot-message {
+  align-self: flex-start;
+}
+
+.bot-message .message-content {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-bottom-left-radius: 2px;
+}
+
+.bot-message .message-time {
+  align-self: flex-start;
+}
+
+/* Estilos para el Usuario */
+.user-message {
+  align-self: flex-end;
+}
+
+.user-message .message-content {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-bottom-right-radius: 2px;
+}
+
+.user-message .message-time {
+  align-self: flex-end;
+}
+
+/* Área de Input */
+.chat-input-area {
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-top: 1px solid #eaedf1;
+}
+
+.input-form {
+  display: flex;
+  gap: 12px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.chat-input:focus {
+  border-color: #4f46e5;
+}
+
+.send-btn {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+  background-color: #4338ca;
+}
+
+/* folder clases */
+ul {
+  list-style: none; /* Quita los puntitos negros si no los quieres */
+  border-left: 1px solid white;
+}
+
+/* li {
+  border-left: 1px solid white;
+} */
+
+#root-tree li ul {
+    padding-left: 13px; /* Controla el tamaño de la sangría aquí */
+}
+
+.folder-close::before {
+    content: "\F3D1";
+    font-family: "bootstrap-icons";
+    display: inline-block; /* Recomendado para que el icono se comporte correctamente */
+    margin-right: 8px;     /* Opcional: añade espacio entre el icono y el texto */
+    cursor: default;
+}
+
+.folder-open::before {
+    content: "\F3D8";
+    font-family: "bootstrap-icons";
+    display: inline-block; /* Recomendado para que el icono se comporte correctamente */
+    margin-right: 8px;     /* Opcional: añade espacio entre el icono y el texto */
+    cursor: default;
+}
+
+.file-icon::before {
+    content: "\F369";
+}
+
+.file-pdf::before {
+    content: "\F63F";
+}
+
+.file-word::before {
+    content: "\F38C";
+}
+
+.file-excel::before {
+    content: "\F388";
+}
+
+.file-image::before {
+    content: "\F429";
+}
+
+.file-media::before {
+    content: "\F3A8 ";
+}
+
+.file-py::before {
+    content: "\F75C";
+}
+
+.file-txt::before {
+    content: "\F766";
+}
+
+.folder-all {
+  cursor: pointer;
+}
+
+.file-all {
+  font-family: "bootstrap-icons";
+  display: inline-block; /* Recomendado para que el icono se comporte correctamente */
+  margin-right: 8px;     /* Opcional: añade espacio entre el icono y el texto */
+  cursor: pointer;
+}

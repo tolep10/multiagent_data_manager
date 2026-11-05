@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interfaz Chatbot con Sidebar</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Panel Izquierdo (Vacío para el Árbol de Directorios) -->
+    <aside class="sidebar">
+      <ul id="root-tree"></ul>
+    </aside>
+
+    <!-- Área Principal del Chatbot -->
+    <main class="chat-container">
+      
+      <!-- Encabezado del Chat -->
+      <header class="chat-header">
+        <div class="bot-info">
+          <div class="avatar">AI</div>
+          <div>
+            <h2>Asistente Virtual</h2>
+            <span class="status">En línea</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Historial de Mensajes -->
+      <section class="chat-messages" id="chat-section">
+        
+        <div class="message bot-message">
+          <div class="message-content">
+            ¡Hola! ¿En qué puedo ayudarte hoy?
+          </div>
+          <!-- <span class="message-time">10:00 AM</span> -->
+        </div>
+
+        <!-- <div class="message user-message">
+          <div class="message-content">
+            Hola, estoy probando esta interfaz.
+          </div>
+          <span class="message-time">10:01 AM</span>
+        </div> -->
+
+      </section>
+
+      <!-- Entrada de Texto y Envío -->
+      <footer class="chat-input-area">
+        <div class="input-form">
+          <input 
+            type="text" 
+            class="chat-input" 
+            placeholder="Escribe un mensaje aquí..." 
+            autocomplete="off"
+            id="input-user"
+          />
+          <button type="button" class="send-btn" id="btn-request">Enviar</button>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+  <script src="scripts/index.js" type="module"></script>
+</body>
+</html>

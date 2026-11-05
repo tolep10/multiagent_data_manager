@@ -1,0 +1,1 @@
+from .injection import get_da_ma_multiagent_service
